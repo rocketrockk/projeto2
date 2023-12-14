@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: black;
+  --bg-url: url(./assets/3d-cartoon-style-hanging-clouds-on-pastel-pink-background-for-product-presentation-mockup-show-free-vector.jpg);
+  --stroke-color: 1px solid #ef8f8f;
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --surface-color-hover: rgba(255, 255, 255, 0.05);
+  --switch-bg-url: url(./assets/sun.svg);
+}
+
+.dark {
+  --text-color: white;
+  --bg-url: url(./assets/noiteescuraEDIT.jpg);
+  --stroke-color: 1px solid black;
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --surface-color-hover: rgba(255, 255, 255, 0.05);
+  --switch-bg-url: url(./assets/moon-stars.svg);
+}
+body {
+  /*
+  background-image: url(./assets/lisbelaFUNDO.jpg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  */
+
+  background: var(--bg-url) no-repeat top center/cover;
+}
+
+body * {
+  font-family: "Chivo", sans-serif;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+#container {
+  height: 712px;
+  width: 100%;
+  max-width: 588px;
+  margin: 56px auto;
+}
+
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+
+#profile img {
+  width: 200px;
+}
+
+#profile p {
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+#switch {
+  position: relative;
+  margin: 4px auto;
+  width: 64px;
+  
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-bg-url) no-repeat center;
+  border: 0px;
+  border-radius: 50%;
+
+  position: absolute;
+  z-index: 1;
+  transform: translateY(-50%);
+  top: 50%;
+  animation: slide-back 0.4s;
+}
+
+#switch span {
+  width: 64px;
+  height: 24px;
+  border: 1px solid var(--stroke-color);
+  background: var(--surface-color);
+  backdrop-filter: blur(4px);
+  border-radius: 9999px;
+  display: block;
+
+  
+}
+
+#switch button:hover {
+  outline: 8px solid var(--surface-color);
+
+}
+
+.dark #switch button {
+  animation: slide-in 0.4s forwards;
+
+
+}
+ul {
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  padding: 24px;
+  gap: 10px;
+}
+
+ul li a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  background: var(--surface-color);
+  border: var(--stroke-color);
+  border-radius: 40px;
+
+  padding: 16px 24px;
+  transition: 0.2s;
+}
+
+ul li a:hover {
+  background: rgba(255, 255, 255, 0.205);
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+}
+
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+} 
+
+@keyframes slide-back {
+  from {
+     left: 50%;
+  }
+  to {
+    left: 0;
+  }
+}
