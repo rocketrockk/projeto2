@@ -64,7 +64,6 @@ body * {
   position: relative;
   margin: 4px auto;
   width: 64px;
-  
 }
 
 #switch button {
@@ -89,19 +88,14 @@ body * {
   backdrop-filter: blur(4px);
   border-radius: 9999px;
   display: block;
-
-  
 }
 
 #switch button:hover {
   outline: 8px solid var(--surface-color);
-
 }
 
 .dark #switch button {
   animation: slide-in 0.4s forwards;
-
-
 }
 ul {
   display: flex;
@@ -140,11 +134,11 @@ ul li a:hover {
   to {
     left: 50%;
   }
-} 
+}
 
 @keyframes slide-back {
   from {
-     left: 50%;
+    left: 50%;
   }
   to {
     left: 0;
