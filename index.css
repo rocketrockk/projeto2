@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 html {
-  cursor: url(./assets/mamadeira.png);
+  cursor: url(./assets/mamadeira.png), auto;
 }
 :root {
   --text-color: black;
