@@ -3,7 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+html {
+  cursor: url(./assets/mamadeira.png);
+}
 :root {
   --text-color: black;
   --bg-url: url(./assets/3d-cartoon-style-hanging-clouds-on-pastel-pink-background-for-product-presentation-mockup-show-free-vector.jpg);
